@@ -14,10 +14,8 @@
 
                     @if(Auth::check())
                         <li class="nav-item">
-                            <form action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <button type="submit" class="btn btn-secondary">Выйти</button>
-                            </form>
+                            <a class="nav-link {{ request()->routeIs('user.dashboard') ? 'active' : '' }}"
+                               href="{{ route('user.dashboard') }}">Личный кабинет</a>
                         </li>
                     @endif
                 </ul>

@@ -23,6 +23,8 @@
                     @error('password') <p class="invalid-feedback">{{ $message }}</p> @enderror
                 </div>
 
+                @error('auth') <p class="alert alert-danger">{{ $message }}</p> @enderror
+
                 <button type="submit" class="btn btn-success">Войти</button>
             </form>
         </div>
